@@ -22,8 +22,8 @@ y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_true=y_test, y_pred=y_pred)
 
 print("Accuracy: {:.2f}%".format(accuracy*100))
- ""Obtained accuracy is Accuracy: 82.07%"""
-""Printing classification report and confusion matrix"""
+ """Obtained accuracy is Accuracy: 82.07%"""
+"""Printing classification report and confusion matrix"""
  
 from sklearn.metrics import classification_report 
 from sklearn.metrics import confusion_matrix 
