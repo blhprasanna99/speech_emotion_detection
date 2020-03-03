@@ -74,7 +74,8 @@ print("Accuracy: {:.2f}%".format(accuracy*100))
 
 # now we save the model
 # make result directory if doesn't exist yet
-"""Accuracy m_params = {
+"""Accuracy:82%"""
+m_params = {
     'alpha': 0.01,
     'batch_size': 200,
     'epsilon': 1e-08, 
@@ -100,4 +101,28 @@ print("Accuracy: {:.2f}%".format(accuracy*100))
 
 # now we save the model
 # make result directory if doesn't exist yet
-"""Accuracy:80%"""
+#Accuracy:80%
+from sklearn.metrics import classification_report 
+from sklearn.metrics import confusion_matrix 
+print(classification_report(y_test,y_p))
+print(confusion_matrix(y_test,y_p))
+
+"""precision    recall  f1-score   support
+
+       angry       0.93      0.89      0.91        90
+       happy       0.69      0.91      0.79        94
+     neutral       0.76      0.59      0.67        44
+         sad       0.86      0.71      0.78       101
+
+    accuracy                           0.80       329
+   macro avg       0.81      0.78      0.78       329
+weighted avg       0.82      0.80      0.80       329
+
+[[80  9  1  0]
+ [ 4 86  1  3]
+ [ 0  9 26  9]
+ [ 2 21  6 72]]"""
+
+
+
+"""NOTE : Refer Speechemotion_mlp.ipynb...my colab notebook for better understanding"""
