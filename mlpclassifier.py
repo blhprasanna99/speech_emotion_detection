@@ -1,3 +1,4 @@
+import loading_data
 #FIRST MODEL
 model_params = {
     'alpha': 0.01,
